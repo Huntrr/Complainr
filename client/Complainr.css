@@ -5,8 +5,9 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Verdana, Geneva, sans-serif;
   color:#454545;
+  background-color: #FBFBFB;
 }
 
 header {
@@ -96,6 +97,10 @@ i {
   padding-right: 4px;
 }
 
+.resolved {
+  color: green;
+}
+
 .button-small {
   min-width: 10px;
   margin: 2px;
@@ -161,9 +166,47 @@ ul#complaint-list li:hover {
   padding-bottom: 3px;
 }
 
+.call-content {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.content {
+  margin: 20px;
+  border: solid;
+  border-color: #CCCCCC;
+  border-width: 2px;
+  background-color: #FF8B43;
+  padding: 10px;
+  text-align: center;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.email {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.content p {
+  padding: 10px;
+}
+
+.content a {
+  color: #CCCCCC;
+}
+
 /* SMALL SCREEN STUFF */
 @media screen and (max-width: 540px) {
   #submission {
+    margin: 20px;
+  }
+
+  .content {
     margin: 20px;
   }
 }

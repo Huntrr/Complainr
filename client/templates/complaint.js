@@ -4,6 +4,9 @@ Template.complaint.helpers({
   },
   downvoted: function() {
     return Session.get('complaint_' + this._id) === -1;
+  },
+  resolved: function() {
+    return Resolutions.find({_id: this._id}).count() > 0;
   }
 });
 
@@ -43,10 +46,6 @@ Template.complaint.events({
 
     Session.setPersistent('complaint_' + this._id, voteVal);
   },
-  'click .emergencyButton': function(e) {
-    Router.go('callDoctor.show', {_id:this._id});
-  },
-  
   'click .presidentButton': function(e) {
     Router.go('contactPresident.show', {_id:this._id});
   }

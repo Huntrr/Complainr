@@ -6,7 +6,6 @@ Meteor.methods({
       title: title,
       desc: desc,
       createdAt: new Date(),
-      resolved: false,
       votes: 1
     });
   },
