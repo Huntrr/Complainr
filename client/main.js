@@ -1,4 +1,5 @@
 Meteor.subscribe("complaints");
+Meteor.subscribe("resolutions");
 
 Meteor.startup(function() {
   Session.set("hideResolved", false);

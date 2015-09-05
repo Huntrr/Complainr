@@ -1,8 +1,37 @@
+
 <template name="complaintPage">
+    
+<div id="resolutionTop">
+    <div class="center">
   <button class="button homeButton"><i class="fa fa-home"></i>Return home</button>
+    </div>
   <ul id="complaint-list">
   {{#with complaints}}
     {{> complaint}}
   {{/with}}
   </ul>
+</div>
+  
+  
+   <div id="resolution">
+    <h2>Help This Person In Need!</h2>
+    <form class="new-resolution">
+      <input type="text" name="description" placeholder="What's your solution?" />
+      <br />
+      <button class="button" type="submit">
+        <i class="fa fa-smile-o"></i> Resolve!
+      </button>
+    </form>
+  </div>
+  
+<div id="resolutionList"> 
+  <h2>{{resolutionText}}</h2>
+  
+  <ul id="resolution-list">
+  {{#each resolutionList}}
+    {{> resolution}}
+    {{/each}}
+  </ul>
+  </div>
+  
 </template>

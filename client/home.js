@@ -19,4 +19,6 @@ Template.home.helpers({
   multipleComplaints: function() {
     return Complaints.find().count() > 1;
   }
+
+  
 });
