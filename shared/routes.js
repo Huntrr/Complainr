@@ -21,16 +21,11 @@ Router.route('/complaint/:_id', function() {
   name: 'complaint.show'
 });
 
-Router.route('/complaint/:_id/callDoctor', function() {
-  var params = this.params;
-  this.render('doctorPage');
-}, {
-  name: 'callDoctor.show'
-});
-
 Router.route('/complaint/:_id/contactPresident', function() {
   var params = this.params;
-  this.render('presidentPage');
+  this.render('presidentPage', {
+    data: function() { return Complaints.findOne({_id:params._id}); } 
+  });
 }, {
   name: 'contactPresident.show'
 });
