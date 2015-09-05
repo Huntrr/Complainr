@@ -8,7 +8,7 @@ if (Meteor.isServer) {
 }
 
 if (Meteor.isClient) {
-  Meteor.subscribe("tasks");
+  Meteor.subscribe("complaints");
 
   // Defines the variables ({{VAR_NAME}}) in the html nody
   Template.body.helpers({
