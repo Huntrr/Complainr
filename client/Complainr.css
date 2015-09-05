@@ -181,15 +181,40 @@ ul#complaint-list li:hover {
   margin-right: auto;
 }
 
+.center {
+  text-align: center;
+  padding: 10px;
+}
+
+#resolutionTop
+{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 #resolutionList {
   margin: 20px;
-  border: solid;
-  border-color: #CCCCCC;
-  border-width: 2px;
-  background-color: rgb(255,167,0);
+ 
   padding: 10px;
   text-align: center;
   max-width: 5000px;
   margin-left: auto;
   margin-right: auto;
+}
+
+#resolutionList li{
+  
+  list-style: none; 
+  text-align: center;
+  padding: 10px;
+  
+  border: ridge;
+  
+  background-color: rgb(255,167,0);
+  
+  margin: 20px;
+  border: solid;
+  border-color: rgb(200,150,0);
+  border-width: 2px;
+
 }

@@ -1,10 +1,16 @@
+
 <template name="complaintPage">
+    
+<div id="resolutionTop">
+    <div class="center">
   <button class="button homeButton"><i class="fa fa-home"></i>Return home</button>
+    </div>
   <ul id="complaint-list">
   {{#with complaints}}
     {{> complaint}}
   {{/with}}
   </ul>
+</div>
   
   
    <div id="resolution">
@@ -18,7 +24,9 @@
     </form>
   </div>
   
-<div id="resolutionList">  
+<div id="resolutionList"> 
+  <h2>{{resolutionText}}</h2>
+  
   <ul id="resolution-list">
   {{#each resolutionList}}
     {{> resolution}}
