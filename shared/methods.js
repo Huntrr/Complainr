@@ -9,5 +9,14 @@ Meteor.methods({
       resolved: false,
       votes: 1
     });
+  },
+  "voteComplaint": function(_id, val) {
+    Complaints.update(_id, {
+      $inc: {votes: val}
+    });
+
+    if(Complaints.findOne({_id: _id}).votes < -5) {
+      Complaints.remove(_id);
+    }
   }
 });

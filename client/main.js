@@ -5,9 +5,10 @@ Meteor.startup(function() {
 });
 
 // Defines the variables ({{VAR_NAME}}) in the html nody
-Template.body.helpers({
+Template.Complainr.helpers({
   year: function() {
     var date = new Date();
+    return date.getFullYear();
   }
 });
 
