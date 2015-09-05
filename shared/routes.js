@@ -20,3 +20,12 @@ Router.route('/complaint/:_id', function() {
 }, {
   name: 'complaint.show'
 });
+
+Router.route('/complaint/:_id/contactPresident', function() {
+  var params = this.params;
+  this.render('presidentPage', {
+    data: function() { return Complaints.findOne({_id:params._id}); } 
+  });
+}, {
+  name: 'contactPresident.show'
+});

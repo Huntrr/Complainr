@@ -1,0 +1,39 @@
+<template name="presidentPage">
+  <div class="call-content">
+    <button class="button homeButton"><i class="fa fa-home"></i>Return home</button>
+
+    <div class="content">
+      You've selected a desire to email the president. Apparently,
+      "<strong>{{title}}</strong>" is a national emergency...
+
+      Regardless, here's our suggestion for your email to the president:
+    </div>
+
+    <div class="content email">
+      <p><strong>TO:</strong> president@whitehouse.gov</p>
+      <p><strong>SUBJECT:</strong> URGENT: PLEASE READ: See how this one problem
+      is bothering your constituents! [NOT SPAM] [IMPORTANT]</p>
+      <p><strong>BODY:</strong>
+        <br />
+        Dear Mr. or Ms. President,
+        <br /><br />
+        I'm writing to you today to inform you about an issue that I find to be
+        a NATIONAL EMERGENCY. You see, myself and {{votes}} other constituents
+        agree that "{{title}}" is a problem. As one of my dear Internet friends
+        put it: "{{desc}}"
+        <br /><br />
+        If that doesn't convince you, I don't know what will. Please
+        Mr. President, we need your help.
+        <br /><br />
+        Yours,
+        <br />
+        NAME
+      </p>
+    </div>
+  </div>
+
+  <div class="content" style="text-align: center;">
+    <h2>Look good? Click <a href="{{emailLink}}">send!</a></h2>
+  </div>
+
+</template>

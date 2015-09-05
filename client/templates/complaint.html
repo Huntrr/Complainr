@@ -1,30 +1,40 @@
 <template name="complaint">
   <li>
     <div class="left-align">
-        <button class="upvote button button-small">
+        <button class="upvote button button-small {{#if upvoted}}button-selected{{/if}}">
           <i class="fa fa-thumbs-up"></i>
         </button>
         <br />
-        <button class="downvote button button-small">
+        <button class="downvote button button-small {{#if downvoted}}button-selected{{/if}}">
           <i class="fa fa-thumbs-down"></i>
         </button>
     </div>
     <div class="left-align" style="max-width: 90%; max-width: calc(100% - 140px);">
       <h2>[{{votes}}] {{title}}</h2>
       <p>{{desc}}</p>
-      <h3>Is this issue an emergency? If so,
-        <button class="button button-tiny">
-          <i class="fa fa-ambulance"></i> Call a doctor
-        </button>
-      </h3>
-      <h3>Is this issue a national emergency? If so,
-        <button class="button button-tiny">
-          <i class="fa fa-university"></i> Contact the president
-        </button>
-      </h3>
+      {{#if resolved}}{{else}}
+        <h3>Is this issue an emergency? If so,
+          <a href="https://en.wikipedia.org/wiki/List_of_actors_who_have_played_the_Doctor">
+            <button class="emergencyButton button button-tiny">
+              <i class="fa fa-ambulance"></i> Call a doctor
+            </button>
+          </a>
+        </h3>
+        <h3>Is this issue a <em>national</em> emergency? If so,
+          <button class="presidentButton button button-tiny">
+            <i class="fa fa-university"></i> Contact the president
+          </button>
+        </h3>
+      {{/if}}
     </div>
     <div class="right-align">
-      <button class="resolveButton button"><i class="fa fa-check-circle-o"></i>Resolve</button>
+      <button class="resolveButton button {{#if resolved}}resolved{{/if}}">
+        {{#if resolved}}
+          <i class="fa fa-check-circle"></i>Resolved!
+        {{else}}
+          <i class="fa fa-check-circle-o"></i>Resolve
+        {{/if}}
+      </button>
     </div>
     <div style="clear: both;"></div>
   </li>

@@ -38,7 +38,4 @@ Template.complaintPage.events({
     //Clear the form
     e.target.description.value = "";
   }
-    
-    
-    
 });
