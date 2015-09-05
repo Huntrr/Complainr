@@ -1,0 +1,29 @@
+<template name="home">
+  {{> submission}}
+
+  <div id="complaints">
+    <div id="options">
+      <div class="left-align">
+        <h2>
+          {{#if someComplaints}}
+            You're not alone. We found {{count}} other complaint{{#if multipleComplaints}}s{{/if}}.
+          {{else}}
+            You are alone. There are no other complaints.
+          {{/if}}
+        </h2>
+      </div>
+
+      <div class="right-align">
+        {{> sortOptions}}
+      </div>
+
+      <div style="clear: both;"></div>
+    </div>
+
+    <ul id="complaint-list">
+      {{#each complaints}}
+        {{> complaint}}
+      {{/each}}
+    </ul>
+  </div>
+</template>
