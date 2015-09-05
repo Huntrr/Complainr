@@ -5,8 +5,8 @@ Template.complaint.helpers({
   downvoted: function() {
     return Session.get('complaint_' + this._id) === -1;
   },
-  resolved: function() {
-    return Resolutions.find({_id: this._id}).count() > 0;
+  resCount: function() {
+    return Resolutions.find({complaintId: this._id}).count();
   }
 });
 

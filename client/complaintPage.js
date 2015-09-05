@@ -1,7 +1,7 @@
 Template.complaintPage.helpers({
   
   resolutionList: function() {
-  return Resolutions.find({complaintId: this.complaints._id})
+    return Resolutions.find({complaintId: this.complaints._id})
   },
   
   count: function()
@@ -28,7 +28,6 @@ Template.complaintPage.events({
     Router.go('home');
   },
   "submit .new-resolution": function(e) {
-    console.log("AWD");
     e.preventDefault();
 
     var desc = e.target.description.value;

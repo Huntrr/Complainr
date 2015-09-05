@@ -11,13 +11,29 @@ Template.home.helpers({
     return date.getFullYear();
   },
   count: function() {
-    return Complaints.find().count();
+    if(Session.get("hideResolved")) {
+      return Complaints.find({resolved: {$ne: true}}, {sort: {votes: -1, createdAt: -1}}).count();
+    } else {
+      return Complaints.find({}, {sort: {votes: -1, createdAt: -1}}).count();
+    }
   },
   someComplaints: function() {
-    return Complaints.find().count() > 0;
+    if(Session.get("hideResolved")) {
+      var count = Complaints.find({resolved: {$ne: true}}, {sort: {votes: -1, createdAt: -1}}).count();
+    } else {
+      var count = Complaints.find({}, {sort: {votes: -1, createdAt: -1}}).count();
+    }
+
+    return count > 0;
   },
   multipleComplaints: function() {
-    return Complaints.find().count() > 1;
+    if(Session.get("hideResolved")) {
+      var count = Complaints.find({resolved: {$ne: true}}, {sort: {votes: -1, createdAt: -1}}).count();
+    } else {
+      var count = Complaints.find({}, {sort: {votes: -1, createdAt: -1}}).count();
+    }
+
+    return this.count > 1;
   }
 
   

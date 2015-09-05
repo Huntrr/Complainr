@@ -7,7 +7,8 @@ Meteor.methods({
       title: title,
       desc: desc,
       createdAt: new Date(),
-      votes: 1
+      votes: 1,
+      resolved: false
     });
   },
   "addResolution": function(complaintId, description) {
@@ -16,6 +17,10 @@ Meteor.methods({
       description: description,
       createdAt: new Date(),
       likes: 0
+    });
+
+    Complaints.update(complaintId, {
+      $set: {resolved: true}
     });
   },
   "voteComplaint": function(_id, val) {
