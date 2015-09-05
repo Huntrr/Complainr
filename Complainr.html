@@ -3,12 +3,42 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <div id="header">
+    <h1>Complainr - Global Issue Tracker</h1>
+  </div>
 
-  {{> hello}}
+  {{> submission}}
+
+  <div id="complaints">
+    <div id="options">
+      <!-- No options yet! -->
+    </div>
+
+    <ul id="complaint-list">
+      {{#each complaints}}
+        {{> complaint}}
+      {{/each}}
+    </ul>
+  </div>
+
+  <div id="footer">
+    &copy; {{year}} <a href="#">Complainr</a>
+  </div>
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="submission">
+  <div id="submission">
+    <form class="new-complaint">
+      <input type="text" name="title" placeholder="What's your complaint?" />
+      <input type="text" name="description" placeholder="Can you tell us a bit more about that?" />
+      <input type="submit" text="Complain!" />
+    </form>
+  </div>
+</template>
+
+<template name="complaint">
+  <li>
+    <h2>{{title}}</h2>
+    <p>{{desc}}</p>
+  </li>
 </template>
