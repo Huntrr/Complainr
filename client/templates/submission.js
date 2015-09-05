@@ -6,11 +6,13 @@ Template.submission.events({
     var title = e.target.title.value;
     var desc = e.target.description.value;
 
-    Meteor.call("addComplaint", title, desc);
+    if(title.length > 3) {
+      Meteor.call("addComplaint", title, desc);
 
-    //Clear the form
-    e.target.title.value = "";
-    e.target.description.value = "";
+      //Clear the form
+      e.target.title.value = "";
+      e.target.description.value = "";
+    }
   }
 });
 
