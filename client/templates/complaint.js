@@ -42,5 +42,12 @@ Template.complaint.events({
     }
 
     Session.setPersistent('complaint_' + this._id, voteVal);
+  },
+  'click .emergencyButton': function(e) {
+    Router.go('callDoctor.show', {_id:this._id});
+  },
+  
+  'click .presidentButton': function(e) {
+    Router.go('contactPresident.show', {_id:this._id});
   }
 });
