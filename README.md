@@ -8,6 +8,8 @@
 
 * Resolve other complaints (with DESCRIPTION/COMMENT)
 
+* Rate complaints
+
 * Like RESOLUTIONS (when a certain number is reached, complaint is RESOLVED)
 
 * Sort complaints by OPEN and RESOLVED or BOTH
