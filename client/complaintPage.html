@@ -5,4 +5,26 @@
     {{> complaint}}
   {{/with}}
   </ul>
+  
+  
+   <div id="resolution">
+    <h2>Help This Person In Need!</h2>
+    <form class="new-resolution">
+      <input type="text" name="description" placeholder="What's your solution?" />
+      <br />
+      <button class="button" type="submit">
+        <i class="fa fa-smile-o"></i> Resolve!
+      </button>
+    </form>
+  </div>
+  
+<div id="resolutionList">  
+  <ul id="resolution-list">
+  {{#each resolutionList}}
+    {{> resolution}}
+    {{/each}}
+  </ul>
+  </div>
+  
 </template>
+

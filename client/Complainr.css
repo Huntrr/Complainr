@@ -168,3 +168,28 @@ ul#complaint-list li:hover {
   }
 }
 
+#resolution {
+  margin: 20px;
+  border: solid;
+  border-color: #CCCCCC;
+  border-width: 2px;
+  background-color: rgb(255,167,0);
+  padding: 10px;
+  text-align: center;
+  max-width: 5000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#resolutionList {
+  margin: 20px;
+  border: solid;
+  border-color: #CCCCCC;
+  border-width: 2px;
+  background-color: rgb(255,167,0);
+  padding: 10px;
+  text-align: center;
+  max-width: 5000px;
+  margin-left: auto;
+  margin-right: auto;
+}
