@@ -1,25 +1,19 @@
 # COMPLAINR
 
-## Features
+## The Global Anonymous Issue Tracker
 
-* Submit complaints about the world (with TITLE, DESCRIPTION, TAGS, GEO)
+### Solving tomorrow’s problems, tomorrow
 
-* See a list of other complaints within a selected geo-radius
+#### Features
 
-* Resolve other complaints (with DESCRIPTION/COMMENT)
+* Anonymous submission of problems bothering you
 
-* Rate complaints
+* Ability to agree/disagree with other complaints
 
-* Like RESOLUTIONS (when a certain number is reached, complaint is RESOLVED)
+* Offer up solutions and resolve the world’s biggest problems
 
-* Sort complaints by OPEN and RESOLVED or BOTH
+* Reach out for help in the event of an emergency (TWO PATHS OF EMERGENCY HELP!)
 
-* Sort complaints by TAGS
+* Sort by resolved and unresolved issues
 
-## Reach Features
-
-* More complicates sorting procedures
-
-* User accounts (scoring system for resolving complaints)
-
-* Achievements
+* Open source
